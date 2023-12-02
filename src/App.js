@@ -55,7 +55,7 @@ function App() {
   // Socket.io setup
   useEffect(() => {
     retrieve();
-    const socket = io.connect("http://localhost:3001")
+    const socket = io.connect("5.9.8.124:22500")
     setGlobalSocket(socket)
 
     socket.on('news_by_server', function (data) {
@@ -244,7 +244,7 @@ function App() {
 
 
   // Routes
-  const API_BASE = 'http://localhost:4000'
+  const API_BASE = '5.9.8.124:22500'
   const register = () => {
     Axios({
       method: "POST",
